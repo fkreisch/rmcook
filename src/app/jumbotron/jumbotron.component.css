@@ -1,0 +1,28 @@
+.bgImgCenter{
+    background-image: url("../../assets/img/food-blog-d.jpg");
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+    background-size: cover;
+}
+
+.no-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.full-padding {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.min-height-100 {
+    min-height: 100px;
+}
+
+.auto-margin {
+    margin-top: auto;
+    margin-left: 0px;
+    margin-bottom: auto;
+    margin-right: auto;
+}

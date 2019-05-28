@@ -16,6 +16,7 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { RecipeCardDeckComponent } from './recipe-card-deck/recipe-card-deck.component';
 import { RecipeAllComponent } from './recipe-all/recipe-all.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AskComponent } from './ask/ask.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SettingsComponent } from './settings/settings.component';
     JumbotronComponent,
     RecipeCardDeckComponent,
     RecipeAllComponent,
-    SettingsComponent
+    SettingsComponent,
+    AskComponent
   ],
   imports: [
     BrowserModule,

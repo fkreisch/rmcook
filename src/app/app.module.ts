@@ -13,13 +13,19 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FooterComponent } from './footer/footer.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
+import { RecipeCardDeckComponent } from './recipe-card-deck/recipe-card-deck.component';
+import { RecipeAllComponent } from './recipe-all/recipe-all.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    JumbotronComponent
+    JumbotronComponent,
+    RecipeCardDeckComponent,
+    RecipeAllComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

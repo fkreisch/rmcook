@@ -10,7 +10,7 @@ export class LinksService {
 
   constructor(private httpClient : HttpClient) {}
 
-  get_links(){
+  getLinks(){
       return this.httpClient.get(environment.firebase.databaseURL + '/links.json');
   }
 }

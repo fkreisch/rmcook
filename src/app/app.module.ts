@@ -9,6 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
+import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
+
 // RECOMMENDED
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FooterComponent } from './footer/footer.component';
@@ -34,7 +37,8 @@ import { AskComponent } from './ask/ask.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     CollapseModule.forRoot(),
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

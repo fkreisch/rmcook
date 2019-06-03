@@ -16,6 +16,7 @@ export class SettingsComponent {
   constructor(private linksService: LinksService) {
     this.linksService.getLinks().subscribe((res : Observable<Link[]>)=>{
       this.links = res;
+      console.log (res)
     });
   };
   

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LinksService } from '../links.service';
+import { Link } from '../link'
 
 @Component({
   selector: 'app-settings',
@@ -10,7 +11,7 @@ import { LinksService } from '../links.service';
 
 export class SettingsComponent {
   
-  links: any;
+  links: Link[];
   
   constructor(private linksService: LinksService) {
     this.linksService.get_links().subscribe((res : any[])=>{

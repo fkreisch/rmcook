@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { LinksService } from '../links.service';
 
 @Component({
   selector: 'app-settings',
@@ -10,16 +10,12 @@ import { Observable } from 'rxjs';
 
 export class SettingsComponent {
   
-  readonly ROOT_URL = 'https://rmcook-b0a1e.firebaseio.com';
-
-  posts: any;
+  links: any;
   
-  constructor(private http: HttpClient) {};
-  
-  getPosts() {
-
-    this.posts = this.http.get(this.ROOT_URL + '/links.json');
-    console.log (this.posts);
-
+  constructor(private linksService: LinksService) {
+    this.linksService.get_links().subscribe((res : any[])=>{
+      this.links = res;
+    });
   };
+  
 }

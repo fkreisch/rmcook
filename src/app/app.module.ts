@@ -20,6 +20,7 @@ import { RecipeCardDeckComponent } from './recipe-card-deck/recipe-card-deck.com
 import { RecipeAllComponent } from './recipe-all/recipe-all.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AskComponent } from './ask/ask.component';
+import { Link } from './link'
 
 @NgModule({
   declarations: [

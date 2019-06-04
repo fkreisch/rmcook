@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from '../environments/environment';
 
 // RECOMMENDED
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -20,7 +19,7 @@ import { RecipeCardDeckComponent } from './recipe-card-deck/recipe-card-deck.com
 import { RecipeAllComponent } from './recipe-all/recipe-all.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AskComponent } from './ask/ask.component';
-import { Link } from './link'
+import { LinksDisplayComponent } from './links-display/links-display.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,8 @@ import { Link } from './link'
     RecipeCardDeckComponent,
     RecipeAllComponent,
     SettingsComponent,
-    AskComponent
+    AskComponent,
+    LinksDisplayComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,9 +39,9 @@ import { Link } from './link'
     BrowserAnimationsModule,
     CollapseModule.forRoot(),
     AngularFontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

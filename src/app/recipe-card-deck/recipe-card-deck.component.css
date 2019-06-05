@@ -39,6 +39,16 @@
 .card-text {
     color: #aaa;
 }
-
+.title {
+    display: flex;  
+    margin: auto;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+.big-text {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 44px;
+    text-decoration: underline;
+}
 
 

@@ -1,34 +1,39 @@
-.bgImgCenter{
+.bgImgCenter {
     background-image: url("../../assets/img/Healthy_food.jpg");
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     position: relative;
     background-size: cover;
     height: 100vh;
 }
+
 .only-left-padding {
     padding-right: 0px;
     padding-left: 20px;
     padding-top: 0px;
     padding-bottom: 0px;
 }
+
 .no-margin {
     margin-right: 0px;
     margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
 .text-margin {
     margin-top: 50px;
     margin-left: 0px;
     margin-bottom: 50px;
     margin-right: auto;
 }
+
 .big-text {
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 5.9vw;
     text-shadow: 3px 3px 5px #000000;
 }
+
 .small-text {
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 3vw;

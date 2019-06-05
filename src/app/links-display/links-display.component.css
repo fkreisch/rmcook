@@ -1,6 +1,6 @@
 .link-box {
-    box-sizing: border-box; 
-    display:block;
+    box-sizing: border-box;
+    display: block;
     padding-top: 40px;
     padding-bottom: 40px;
     width: 90%;
@@ -8,6 +8,7 @@
     border: 0px;
     background: rgb(0, 0, 0);
 }
+
 .link-b {
     box-sizing: border-box;
     margin: auto;
@@ -16,27 +17,31 @@
     justify-content: center;
     max-height: 140px;
 }
+
 .link-b img {
     border-bottom-right-radius: 40%;
     border-top-left-radius: 0;
     border: 2px solid #fff;
 }
+
 .link-b a {
     writing-mode: sideways-lr;
     color: rgba(0, 0, 0, 0);
     text-decoration: none;
     transition: color 1s;
 }
-.link-b a:hover {
 
+.link-b a:hover {
     color: #aaa;
 }
+
 .title {
-    display: flex;  
+    display: flex;
     margin: auto;
     justify-content: center;
     padding-top: 40px;
 }
+
 .big-text {
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 44px;

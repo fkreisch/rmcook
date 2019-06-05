@@ -1,15 +1,28 @@
 <div class="title">
-  <h1 class="text-white big-text">Links</h1>
+    <h1 class="text-white big-text">Links</h1>
 </div>
 
 <div class="link-box">
-  <div class="row">
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 link-b" *ngFor="let link of links">
-      <a href="{{ link.elink }}">{{ link.name }}<br><img src="{{ link.picture }}"></a>
+    <div class="row">
+        <div
+            class="col-12 col-sm-6 col-md-4 col-lg-3 link-b"
+            *ngFor="let link of links"
+        >
+            <a href="{{ link.elink }}">
+                {{ link.name }}
+                <br>
+                <img src="{{ link.picture }}">
+            </a>
+        </div>
     </div>
-  </div>
 </div>
 
-<br><br><br>
-<br><br><br>
-<br><br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -2,25 +2,24 @@
     border: 0px;
     background: rgb(0, 0, 0);
 }
-.card:before
-{
-	content: '';
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	background: rgb(255, 255, 255);
-	transform: skew(2deg,2deg);
-	z-index: 1;
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: rgb(255, 255, 255);
+    transform: skew(2deg, 2deg);
+    z-index: 1;
 }
 
 .card-img-top-div, .card-body {
-  z-index: 2;
-  background: rgb(0, 0, 0);
+    z-index: 2;
+    background: rgb(0, 0, 0);
 }
-.card-img-top-div {
-}
+
 .card-img-top {
     border-top-right-radius: 40%;
     border-top-left-radius: 0;
@@ -30,25 +29,27 @@
 .card-img-top-div {
     background: rgb(0, 0, 0);
 }
+
 .card-title {
     font-family: 'Oleo Script Swash Caps', cursive;
     font-weight: bold;
     color: #fff;
     padding-top: 20px;
 }
+
 .card-text {
     color: #aaa;
 }
+
 .title {
-    display: flex;  
+    display: flex;
     margin: auto;
     justify-content: center;
     padding-bottom: 40px;
 }
+
 .big-text {
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 44px;
     text-decoration: underline;
 }
-
-

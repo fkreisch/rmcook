@@ -7,9 +7,6 @@
     margin: auto;
     border: 0px;
     background: rgb(0, 0, 0);
-
-
-
 }
 .link-b {
     box-sizing: border-box;
@@ -18,7 +15,6 @@
     display: flex;
     justify-content: center;
     max-height: 140px;
-
 }
 .link-b img {
     border-bottom-right-radius: 40%;

@@ -6,13 +6,14 @@ import { RecipeAllComponent } from './recipe-all/recipe-all.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LinksDisplayComponent } from './links-display/links-display.component';
 import { AskComponent } from './ask/ask.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'recipe-card-deck', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
  
   {
-    path:  'recipe-card-deck',
-    component:  RecipeCardDeckComponent
+    path:  'home',
+    component:  HomeComponent
   },
   {
     path:  'recipe-all',

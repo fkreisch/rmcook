@@ -20,6 +20,7 @@ import { RecipeAllComponent } from './recipe-all/recipe-all.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AskComponent } from './ask/ask.component';
 import { LinksDisplayComponent } from './links-display/links-display.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { LinksDisplayComponent } from './links-display/links-display.component';
     SettingsComponent,
     AskComponent,
     LinksDisplayComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

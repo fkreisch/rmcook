@@ -1,3 +1,44 @@
-.custom-card {
-    background-color: #e8ebf5;
+.card {
+    border: 0px;
+    background: rgb(0, 0, 0);
 }
+.card:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: rgb(255, 255, 255);
+	transform: skew(2deg,2deg);
+	z-index: 1;
+}
+
+.card-img-top-div, .card-body {
+  z-index: 2;
+  background: rgb(0, 0, 0);
+}
+.card-img-top-div {
+}
+.card-img-top {
+    border-top-right-radius: 40%;
+    border-top-left-radius: 0;
+    border: 2px solid #fff;
+}
+
+.card-img-top-div {
+    background: rgb(0, 0, 0);
+}
+.card-title {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 20px;
+}
+.card-text {
+    color: #aaa;
+}
+
+
+

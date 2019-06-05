@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
+
 import { HttpClientModule } from '@angular/common/http';
 
 // RECOMMENDED
@@ -21,6 +22,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { AskComponent } from './ask/ask.component';
 import { LinksDisplayComponent } from './links-display/links-display.component';
 import { HomeComponent } from './home/home.component';
+import { LinksAdminComponent } from './links-admin/links-admin.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { HomeComponent } from './home/home.component';
     AskComponent,
     LinksDisplayComponent,
     HomeComponent,
+    LinksAdminComponent,
   ],
   imports: [
     BrowserModule,

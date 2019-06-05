@@ -7,29 +7,30 @@ import { SettingsComponent } from './settings/settings.component';
 import { LinksDisplayComponent } from './links-display/links-display.component';
 import { AskComponent } from './ask/ask.component';
 import { HomeComponent } from './home/home.component';
+import { LinksAdminComponent } from './links-admin/links-admin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
- 
+
   {
-    path:  'home',
-    component:  HomeComponent
+    path: 'home',
+    component: HomeComponent
   },
   {
-    path:  'recipe-all',
-    component:  RecipeAllComponent
+    path: 'recipe-all',
+    component: RecipeAllComponent
   },
   {
-    path:  'settings',
-    component:  SettingsComponent
+    path: 'settings',
+    component: SettingsComponent
   },
   {
-    path:  'links-display',
-    component:  LinksDisplayComponent
+    path: 'links-admin',
+    component: LinksAdminComponent
   },
   {
-    path:  'ask',
-    component:  AskComponent
+    path: 'ask',
+    component: AskComponent
   }
 
 ];

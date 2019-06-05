@@ -1,0 +1,69 @@
+<div class="title">
+    <h1 class="text-white big-text">Links admin</h1>
+</div>
+<div class="container">
+    <div
+        class="row"
+        *ngFor="let link of links"
+    >
+        <form>
+            <div class="form-group">
+                <label
+                    class="text-white"
+                    for="formGroupExampleInput"
+                >
+                    Link Name
+                </label>
+                <input
+                    value="{{ link.name }}"
+                    type="text"
+                    class="form-control"
+                    id="formGroupExampleInput"
+                    placeholder="Link Name"
+                >
+            </div>
+            <div class="form-group">
+                <label
+                    class="text-white"
+                    for="formGroupExampleInput2"
+                >
+                    Link URL
+                </label>
+                <input
+                    value="{{ link.elink }}"
+                    type="text"
+                    class="form-control"
+                    id="formGroupExampleInput2"
+                    placeholder="Link URL"
+                >
+            </div>
+            <div class="form-group">
+                <label
+                    class="text-white"
+                    for="formGroupExampleInput2"
+                >
+                    Picture URL
+                </label>
+                <input
+                    value="{{ link.picture }}"
+                    type="text"
+                    class="form-control"
+                    id="formGroupExampleInput2"
+                    placeholder="Picture URL"
+                >
+            </div>
+            <button
+                type="button"
+                class="btn btn-primary"
+            >
+                Modify
+            </button>
+            <button
+                type="button"
+                class="btn btn-primary"
+            >
+                Delete
+            </button>
+        </form>
+    </div>
+</div>

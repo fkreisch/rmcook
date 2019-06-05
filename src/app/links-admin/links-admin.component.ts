@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LinksService } from '../links.service';
 import { Link } from '../link';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
-  selector: 'app-links-display',
-  templateUrl: './links-display.component.html',
-  styleUrls: ['./links-display.component.css']
+  selector: 'app-links-admin',
+  templateUrl: './links-admin.component.html',
+  styleUrls: ['./links-admin.component.css']
 })
-
-export class LinksDisplayComponent {
+export class LinksAdminComponent {
 
   links: Observable<Link[]>;
 
@@ -18,4 +18,5 @@ export class LinksDisplayComponent {
       this.links = res;
     });
   }
+
 }

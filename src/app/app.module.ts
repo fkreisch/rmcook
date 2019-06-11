@@ -23,6 +23,7 @@ import { AskComponent } from './ask/ask.component';
 import { LinksDisplayComponent } from './links-display/links-display.component';
 import { HomeComponent } from './home/home.component';
 import { LinksAdminComponent } from './links-admin/links-admin.component';
+import { TopSpacerComponent } from './top-spacer/top-spacer.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { LinksAdminComponent } from './links-admin/links-admin.component';
     LinksDisplayComponent,
     HomeComponent,
     LinksAdminComponent,
+    TopSpacerComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,31 +10,30 @@
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: rgb(255, 255, 255);
+    background: rgb(237, 230, 215);
     transform: skew(2deg, 2deg);
     z-index: 1;
+    border-radius: 1em;
 }
 
 .card-img-top-div, .card-body {
     z-index: 2;
     background: rgb(0, 0, 0);
+    border-radius: 1em;
 }
 
 .card-img-top {
-    border-top-right-radius: 40%;
-    border-top-left-radius: 0;
-    border: 2px solid #fff;
+    border-radius: 0.5em 2em 0.5em 2em;
 }
 
 .card-img-top-div {
-    background: rgb(0, 0, 0);
+    background: rgb(237, 230, 215));
 }
 
 .card-title {
     font-family: 'Oleo Script Swash Caps', cursive;
-    font-weight: bold;
-    color: #fff;
-    padding-top: 20px;
+    color: rgb(237, 230, 215);
+    margin-top: 16px;
 }
 
 .card-text {
@@ -46,6 +45,7 @@
     margin: auto;
     justify-content: center;
     padding-bottom: 40px;
+    color: rgb(237, 230, 215);
 }
 
 .big-text {

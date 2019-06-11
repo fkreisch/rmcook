@@ -1,5 +1,5 @@
 <div class="title">
-    <h1 class="text-white big-text">Links</h1>
+    <h1 class="big-text">Links</h1>
 </div>
 
 <div class="link-box">
@@ -8,11 +8,24 @@
             class="col-12 col-sm-6 col-md-4 col-lg-3 link-b"
             *ngFor="let link of links"
         >
-            <a href="{{ link.elink }}">
-                {{ link.name }}
-                <br>
-                <img src="{{ link.picture }}">
-            </a>
+            <div class="link-container">
+                <a href="{{ link.elink }}">
+                    <img src="{{ link.picture }}">
+                </a>
+                <div class="name-container">
+                    <div class="name">{{ link.name }}</div>
+                    <button
+                        type="button"
+                        class="btn btn-red"
+                        routerLink="/recipe-all"
+                    ></button>
+                    <button
+                        type="button"
+                        class="btn btn-blue"
+                        routerLink="/recipe-all"
+                    ></button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

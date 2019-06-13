@@ -4,6 +4,7 @@
     text-align: right;
     color: rgb(237, 230, 215);
 }
+
 .top-none {
     display: block;
     margin: 15em 5em;
@@ -19,4 +20,15 @@
 .small-text {
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 3vw;
+}
+
+.chef {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.chef-pic {
+    width: 100%;
+    height: auto;
 }

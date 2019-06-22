@@ -7,7 +7,6 @@ import { SettingsComponent } from './settings/settings.component';
 import { LinksDisplayComponent } from './links-display/links-display.component';
 import { AskComponent } from './ask/ask.component';
 import { HomeComponent } from './home/home.component';
-import { LinksAdminComponent } from './links-admin/links-admin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -26,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'links-admin',
-    component: LinksAdminComponent
+    component: SettingsComponent
   },
   {
     path: 'ask',

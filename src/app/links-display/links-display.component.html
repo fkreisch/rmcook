@@ -4,38 +4,58 @@
 
 <div class="link-box">
     <div class="row">
-        <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 link-b"
-            *ngFor="let link of links"
-        >
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 link-b" *ngFor="let link of links | async">
             <div class="link-container">
                 <a href="{{ link.elink }}">
                     <img src="{{ link.picture }}">
                 </a>
                 <div class="name-container">
-                    <div class="name">{{ link.name }}</div>
-                    <button
-                        type="button"
-                        class="btn btn-red"
-                        routerLink="/recipe-all"
-                    ></button>
-                    <button
-                        type="button"
-                        class="btn btn-blue"
-                        routerLink="/recipe-all"
-                    ></button>
+                    <div class="name" id="{{ link.id }}"> {{ link.name }} </div>
+                    <button type="button" class="btn btn-blue" (click)="openModal(linkedit)"></button>
+
+                    <ng-template #linkedit>
+                        <div class="modal-header">
+                            <h4 class="modal-title pull-left"> {{ link.name }} </h4>
+                            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{ link.picture }}">
+                            <form>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput1">
+                                        Link Name
+                                    </label>
+                                    <input name="name" value="{{ link.name }}" type="text" class="form-control" id="formGroupExampleInput1" placeholder="Link Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput2">
+                                        Link URL
+                                    </label>
+                                    <input name="elink" value="{{ link.elink }}" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Link URL">
+                                </div>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput3">
+                                        Picture URL
+                                    </label>
+                                    <input name="picture" value="{{ link.picture }}" type="text" class="form-control" id="formGroupExampleInput3" placeholder="Picture URL">
+                                </div>
+                                <button type="button" class="btn btn-primary commit">
+                                    Modify
+                                </button>
+                                <button type="button" class="btn btn-primary commit">
+                                    Delete
+                                </button>
+                                <button (click)="createPost()" type="button" class="btn btn-primary commit">
+                                    Add As New
+                                </button>
+                            </form>
+                        </div>
+                    </ng-template>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>

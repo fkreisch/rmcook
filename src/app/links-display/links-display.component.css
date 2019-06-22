@@ -64,7 +64,8 @@
     left: 0;
 }
 
-.btn-red, .btn-blue {
+.btn-red,
+.btn-blue {
     border-color: rgb(237, 230, 215);
     border-radius: 50%;
     float: right;
@@ -83,4 +84,8 @@
 .btn-blue:hover {
     background-color: #51608c;
     border-color: #51608c;
+}
+
+.commit {
+    margin: 2px;
 }

@@ -1,5 +1,5 @@
 import { Component, TemplateRef, OnInit } from '@angular/core';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { BsModalService, BsModalRef, ModalModule } from 'ngx-bootstrap/modal';
 import { FormGroup, FormControl } from '@angular/forms';
 import { LinksService } from '../services/links.service';
 
@@ -11,6 +11,7 @@ import { LinksService } from '../services/links.service';
 
 export class LinksDisplayComponent implements OnInit {
 
+  links: import('../services/links.service').LinkID[];
   modalRef: BsModalRef;
 
   linkForm = new FormGroup({
@@ -31,12 +32,18 @@ export class LinksDisplayComponent implements OnInit {
     });
   }
 
-  onSubmit(): void {
-
-  }
-
   makePost(linkedit: TemplateRef<any>): void {
     this.linksService.addLink(this.linkForm.value);
+    this.modalRef.hide();
+  }
+
+  makeDelete(event: any, linkid: any) {
+    this.linksService.deleteLink(linkid);
+    this.modalRef.hide();
+  }
+
+  makeUpdate(event: any, linkid: any) {
+    this.linksService.updateLink(linkid, this.linkForm.value);
     this.modalRef.hide();
   }
 }

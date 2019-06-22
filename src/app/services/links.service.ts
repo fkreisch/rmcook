@@ -14,10 +14,11 @@ export class LinksService {
 
   linksCollection: AngularFirestoreCollection<Link>;
   links: Observable<LinkID[]>;
+  linkDoc: AngularFirestoreDocument<Link>;
 
   constructor(public afs: AngularFirestore) {
 
-    this.linksCollection = afs.collection<Link>('links');
+    this.linksCollection = afs.collection<Link>('links', ref => ref.orderBy('name', 'asc'));
 
     this.links = this.linksCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
@@ -34,5 +35,15 @@ export class LinksService {
 
   addLink(link: Link) {
     this.linksCollection.add(link);
+  }
+
+  deleteLink(linkid: any) {
+    this.linkDoc = this.afs.doc(`links/${linkid}`);
+    this.linkDoc.delete();
+  }
+
+  updateLink(linkid: any, link: Link) {
+    this.linkDoc = this.afs.doc(`links/${linkid}`);
+    this.linkDoc.update(link);
   }
 }

@@ -53,6 +53,7 @@
     -webkit-transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
+    cursor: zoom-in;
 }
 
 .name {
@@ -64,28 +65,10 @@
     left: 0;
 }
 
-.btn-red,
-.btn-blue {
-    border-color: rgb(237, 230, 215);
-    border-radius: 50%;
-    float: right;
-    padding: .5rem .5rem;
-    font-size: .875rem;
-    line-height: 1;
-    margin-right: 5px;
-    margin-top: 3px;
-}
-
-.btn-red:hover {
-    background-color: #c42121;
-    border-color: #c42121;
-}
-
-.btn-blue:hover {
-    background-color: #51608c;
-    border-color: #51608c;
-}
-
 .commit {
     margin: 2px;
+}
+
+.logo {
+    padding-bottom: 10px;
 }

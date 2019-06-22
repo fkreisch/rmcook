@@ -4,13 +4,15 @@
 
 <div class="link-box">
     <div class="row">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 link-b" *ngFor="let link of links | async">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 link-b" *ngFor="let link of links">
             <div class="link-container">
                 <a href="{{ link.elink }}">
                     <img src="{{ link.picture }}">
                 </a>
                 <div class="name-container">
-                    <div class="name" id="{{ link.id }}"> {{ link.name }} </div>
+                    <div class="name" id="{{ link.id }}">
+                        {{ link.name }}
+                    </div>
                     <button type="button" class="btn btn-blue" (click)="openModal(linkedit)"></button>
 
                     <ng-template #linkedit>
@@ -22,24 +24,24 @@
                         </div>
                         <div class="modal-body">
                             <img src="{{ link.picture }}">
-                            <form>
+                            <form [formGroup]="linkForm" (ngSubmit)="onSubmit()">
                                 <div class="form-group">
-                                    <label for="formGroupExampleInput1">
+                                    <label for="name">
                                         Link Name
                                     </label>
-                                    <input name="name" value="{{ link.name }}" type="text" class="form-control" id="formGroupExampleInput1" placeholder="Link Name">
+                                    <input formControlName="name" [(ngModel)]="link.name" type="text" class="form-control" id="name" placeholder="Link Name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="formGroupExampleInput2">
+                                    <label for="elink">
                                         Link URL
                                     </label>
-                                    <input name="elink" value="{{ link.elink }}" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Link URL">
+                                    <input formControlName="elink" [(ngModel)]="link.elink" type="text" class="form-control" id="elink" placeholder="Link URL">
                                 </div>
                                 <div class="form-group">
-                                    <label for="formGroupExampleInput3">
+                                    <label for="picture">
                                         Picture URL
                                     </label>
-                                    <input name="picture" value="{{ link.picture }}" type="text" class="form-control" id="formGroupExampleInput3" placeholder="Picture URL">
+                                    <input formControlName="picture" [(ngModel)]="link.picture" type="text" class="form-control" id="picture" placeholder="Picture URL">
                                 </div>
                                 <button type="button" class="btn btn-primary commit">
                                     Modify
@@ -47,7 +49,7 @@
                                 <button type="button" class="btn btn-primary commit">
                                     Delete
                                 </button>
-                                <button (click)="createPost()" type="button" class="btn btn-primary commit">
+                                <button (click)="makePost()" type="button" class="btn btn-primary commit">
                                     Add As New
                                 </button>
                             </form>

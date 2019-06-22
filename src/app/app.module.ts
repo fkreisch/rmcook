@@ -12,6 +12,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // RECOMMENDED
 
@@ -25,6 +26,7 @@ import { LinksDisplayComponent } from './links-display/links-display.component';
 import { HomeComponent } from './home/home.component';
 import { TopSpacerComponent } from './top-spacer/top-spacer.component';
 
+import { LinksService } from './services/links.service';
 
 @NgModule({
   declarations: [
@@ -51,8 +53,9 @@ import { TopSpacerComponent } from './top-spacer/top-spacer.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [LinksService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

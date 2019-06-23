@@ -2,46 +2,45 @@
     position: sticky;
     top: 0;
 }
+
 .top {
-    margin:0;
+    margin: 0;
     padding: 0;
-}
-.big-text {
-    font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 4vw;
-    color: rgb(237, 230, 215);
-    margin: 0px 0px 0px 20px;
-    line-height: 1;
 }
 
 .navbar-style {
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 10;
+    z-index: 100;
     border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-    line-height: 2.6;
-}
-
-.logo {
-    width: 100px;
-    padding: 5px 0px 5px 20px;
 }
 
 nav ul li a {
-    font-family: 'Oleo Script Swash Caps', cursive;
+    border: 0;
     font-weight: bold;
     color: rgba(237, 230, 215, 0.8);
     padding: 0 20px;
     margin: 5px;
-    border: 2px solid rgba(0, 0, 0, 0);
+    line-height: 2.6;
 }
 
 nav ul li a.active {
-    background: #51608c;
-    border: 2px solid rgba(237, 230, 215, 0.8);
-    border-radius: 0.5em 2em 0.5em 2em;
+    border-bottom: 2px solid #51608c;
+    border-radius: 0.5em;
+    background: linear-gradient(150deg, rgba(0, 0, 0, 0) 0%, rgba(9, 9, 121, 0.07) 80%, rgba(81, 96, 140, 1) 100%);
 }
 
 nav ul li a:hover {
-    border: 2px solid rgba(237, 230, 215, 0.8);
-    border-radius: 0.5em 2em 0.5em 2em;
+    border-bottom: 2px solid #51608c;
+}
+
+.logo {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 35px;
+    color: #51608c;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.navbar-toggler-icon {
+    color: #51608c;
 }

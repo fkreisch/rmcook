@@ -16,7 +16,8 @@
     border-radius: 1em;
 }
 
-.card-img-top-div, .card-body {
+.card-img-top-div,
+.card-body {
     z-index: 2;
     background: rgb(0, 0, 0);
     border-radius: 1em;
@@ -31,7 +32,6 @@
 }
 
 .card-title {
-    font-family: 'Oleo Script Swash Caps', cursive;
     color: rgb(237, 230, 215);
     margin-top: 16px;
 }
@@ -49,7 +49,6 @@
 }
 
 .big-text {
-    font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 44px;
     text-decoration: underline;
 }

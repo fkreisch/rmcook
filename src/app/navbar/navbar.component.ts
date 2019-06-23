@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
   }
-  
+
   constructor() { }
 
   ngOnInit() {

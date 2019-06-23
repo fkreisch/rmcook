@@ -8,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class JumbotronComponent implements OnInit {
 
   constructor() {
-    document.body.style.backgroundImage = "url('../../assets/img/chef.jpg')";
+    document.body.style.backgroundImage = 'url(\'../../assets/img/chef2.jpg\')';
   }
+
   ngOnDestroy() {
-    document.body.style.backgroundImage = "none";
+    document.body.style.backgroundImage = 'none';
   }
 
   ngOnInit() {
-    document.body.classList.add('[style.background-image]":"../../assets/img/chef.jpg');
+    document.body.classList.add('[style.background-image]":"../../assets/img/chef2.jpg');
   }
 }

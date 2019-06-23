@@ -42,13 +42,13 @@
                                     </label>
                                     <input formControlName="picture" [(ngModel)]="link.picture" type="text" class="form-control" id="picture" placeholder="Picture URL">
                                 </div>
-                                <button (click)="makeUpdate($event, link.id)" type="button" class="btn grey commit">
+                                <button (click)="makeUpdate($event, link.id)" type="button" class="btn btn-primary commit">
                                     Modify
                                 </button>
-                                <button (click)="makePost()" type="button" class="btn grey commit">
+                                <button (click)="makePost()" type="button" class="btn btn-primary commit">
                                     Add As New
                                 </button>
-                                <button (click)="makeDelete($event, link.id)" type="button" class="btn red commit float-right">
+                                <button (click)="makeDelete($event, link.id)" type="button" class="btn btn-danger commit float-right">
                                     Delete
                                 </button>
                             </form>

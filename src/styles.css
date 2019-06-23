@@ -3,6 +3,7 @@
 html,
 body {
     background-color: black;
+    background-image: url('assets/img/chef2.jpg');
     background-repeat: no-repeat;
     font-family: 'Mina', sans-serif;
 }

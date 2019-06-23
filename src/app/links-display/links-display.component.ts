@@ -32,7 +32,7 @@ export class LinksDisplayComponent implements OnInit {
     });
   }
 
-  makePost(linkedit: TemplateRef<any>): void {
+  makePost() {
     this.linksService.addLink(this.linkForm.value);
     this.modalRef.hide();
   }

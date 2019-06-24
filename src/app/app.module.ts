@@ -24,12 +24,12 @@ import { SettingsComponent } from './settings/settings.component';
 import { AskComponent } from './ask/ask.component';
 import { LinksDisplayComponent } from './links-display/links-display.component';
 import { HomeComponent } from './home/home.component';
-import { TopSpacerComponent } from './top-spacer/top-spacer.component';
 import { HeaderComponent } from './header/header.component';
 
 // SERVICES
 
 import { LinksService } from './services/links.service';
+import { RecipesService } from './services/recipes.service';
 
 // OTHER
 
@@ -47,7 +47,6 @@ import { environment } from '../environments/environment';
     AskComponent,
     LinksDisplayComponent,
     HomeComponent,
-    TopSpacerComponent,
     HeaderComponent,
   ],
   imports: [
@@ -64,7 +63,8 @@ import { environment } from '../environments/environment';
     ReactiveFormsModule,
   ],
   providers: [
-    LinksService
+    LinksService,
+    RecipesService,
   ],
   bootstrap: [
     AppComponent

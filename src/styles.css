@@ -24,7 +24,7 @@ label {
 .input-form-wbg {
     display: block;
     width: 100%;
-    height: calc(1.5em + .75rem + 2px);
+    height: auto;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -34,6 +34,7 @@ label {
     background-clip: padding-box;
     border: 0px solid #ced4da;
     border-bottom: 1px solid #ced4da;
+    border-top: 1px solid rgba(0, 0, 0, 0);
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -41,10 +42,11 @@ label {
 }
 
 .input-form-wbg:hover {
-    border: 0px solid #ced4da;
     border-bottom: 1px solid #747a8b;
 }
 
 .input-form-wbg:focus {
-    border-bottom: 2px solid #51608c;
+    border-bottom: 1px solid #51608c;
+    border-top: 1px solid #51608c;
+    background-color: rgb(248, 255, 234);
 }

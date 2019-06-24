@@ -1,0 +1,13 @@
+.title {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    color: rgb(237, 230, 215);
+}
+
+.big-text {
+    font-size: 44px;
+    text-decoration: underline;
+}

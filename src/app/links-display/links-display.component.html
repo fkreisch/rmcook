@@ -1,60 +1,61 @@
-<div class="title">
-    <h1 class="big-text">Links</h1>
-</div>
+<app-header [htitle]="'Links'"></app-header>
+<div class="container">
+    <div class="link-box">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 link-b" *ngFor="let link of links">
+                <div class="link-container">
+                    <a href="{{ link.elink }}">
+                        <img src="{{ link.picture }}">
+                    </a>
+                    <div class="name-container" (click)="openModal(linkedit)">
+                        <div class=" name " id="{{ link.id }}">
+                            {{ link.name }}
+                        </div>
 
-<div class="link-box">
-    <div class="row">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 link-b" *ngFor="let link of links">
-            <div class="link-container">
-                <a href="{{ link.elink }}">
-                    <img src="{{ link.picture }}">
-                </a>
-                <div class="name-container" (click)="openModal(linkedit)">
-                    <div class=" name " id="{{ link.id }}">
-                        {{ link.name }}
-                    </div>
-
-                    <ng-template #linkedit>
-                        <div class="modal-header">
-                            <h4 class="modal-title pull-left"> {{ link.name }} </h4>
-                            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                        <ng-template #linkedit>
+                            <div class="modal-header">
+                                <h4 class="modal-title pull-left"> {{ link.name }} </h4>
+                                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="{{ link.picture }}" class="img-fluid link-container">
-                            <form [formGroup]="linkForm">
-                                <div class="form-group">
-                                    <label for="name">
+                            </div>
+                            <div class="modal-body">
+                                <br>
+                                <img src="{{ link.picture }}" class="img-fluid link-container">
+                                <br>
+                                <form [formGroup]="linkForm">
+                                    <div class="form-group">
+                                        <label for="name">
                                         Link Name
                                     </label>
-                                    <input formControlName="name" [(ngModel)]="link.name" type="text" class="form-control" id="name" placeholder="Link Name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="elink">
+                                        <input formControlName="name" [(ngModel)]="link.name" type="text" class="input-form-wbg" id="name" placeholder="Link Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="elink">
                                         Link URL
                                     </label>
-                                    <input formControlName="elink" [(ngModel)]="link.elink" type="text" class="form-control" id="elink" placeholder="Link URL">
-                                </div>
-                                <div class="form-group">
-                                    <label for="picture">
+                                        <input formControlName="elink" [(ngModel)]="link.elink" type="text" class="input-form-wbg" id="elink" placeholder="Link URL">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="picture">
                                         Picture URL
                                     </label>
-                                    <input formControlName="picture" [(ngModel)]="link.picture" type="text" class="form-control" id="picture" placeholder="Picture URL">
-                                </div>
-                                <button (click)="makeUpdate($event, link.id)" type="button" class="btn btn-primary commit">
+                                        <input formControlName="picture" [(ngModel)]="link.picture" type="text" class="input-form-wbg" id="picture" placeholder="Picture URL">
+                                    </div>
+                                    <button (click)="makeUpdate($event, link.id)" type="button" class="btn btn-primary commit">
                                     Modify
                                 </button>
-                                <button (click)="makePost()" type="button" class="btn btn-primary commit">
+                                    <button (click)="makePost()" type="button" class="btn btn-primary commit">
                                     Add As New
                                 </button>
-                                <button (click)="makeDelete($event, link.id)" type="button" class="btn btn-danger commit float-right">
+                                    <button (click)="makeDelete($event, link.id)" type="button" class="btn btn-danger commit float-right">
                                     Delete
                                 </button>
-                            </form>
-                        </div>
-                    </ng-template>
+                                </form>
+                            </div>
+                        </ng-template>
 
+                    </div>
                 </div>
             </div>
         </div>

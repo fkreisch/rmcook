@@ -5,6 +5,7 @@ import { RecipeAllComponent } from './recipe-all/recipe-all.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AskComponent } from './ask/ask.component';
 import { HomeComponent } from './home/home.component';
+import { LinksDisplayComponent } from './links-display/links-display.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,8 +23,8 @@ const routes: Routes = [
     component: SettingsComponent
   },
   {
-    path: 'links-admin',
-    component: SettingsComponent
+    path: 'links-display',
+    component: LinksDisplayComponent
   },
   {
     path: 'ask',
@@ -36,4 +37,13 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+
+export class AppRoutingModule {
+  static routableComponents = [
+    HomeComponent,
+    RecipeAllComponent,
+    SettingsComponent,
+    LinksDisplayComponent,
+    AskComponent
+  ];
+}

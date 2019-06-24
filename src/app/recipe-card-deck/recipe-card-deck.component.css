@@ -10,10 +10,11 @@
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: rgb(237, 230, 215);
     transform: skew(2deg, 2deg);
     z-index: 1;
     border-radius: 1em;
+    background: #51608c;
+    background: linear-gradient(135deg, #51608c 0%, #000000 50%, #51608c 100%);
 }
 
 .card-img-top-div,
@@ -25,10 +26,11 @@
 
 .card-img-top {
     border-radius: 0.5em 2em 0.5em 2em;
+    border: 2px solid #51608c;
 }
 
 .card-img-top-div {
-    background: rgb(237, 230, 215));
+    background: rgb(237, 230, 215);
 }
 
 .card-title {
@@ -38,17 +40,4 @@
 
 .card-text {
     color: #aaa;
-}
-
-.title {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    padding-bottom: 40px;
-    color: rgb(237, 230, 215);
-}
-
-.big-text {
-    font-size: 44px;
-    text-decoration: underline;
 }

@@ -2,6 +2,7 @@ import { Component, TemplateRef, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef, ModalModule } from 'ngx-bootstrap/modal';
 import { FormGroup, FormControl } from '@angular/forms';
 import { LinksService } from '../services/links.service';
+import { Link } from '../link';
 
 @Component({
   selector: 'app-links-display',
@@ -11,7 +12,7 @@ import { LinksService } from '../services/links.service';
 
 export class LinksDisplayComponent implements OnInit {
 
-  links: import('../services/links.service').LinkID[];
+  public links: Link[];
   modalRef: BsModalRef;
 
   linkForm = new FormGroup({

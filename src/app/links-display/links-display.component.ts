@@ -2,7 +2,7 @@ import { Component, TemplateRef, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef, ModalModule } from 'ngx-bootstrap/modal';
 import { FormGroup, FormControl } from '@angular/forms';
 import { LinksService } from '../services/links.service';
-import { Link } from '../link';
+import { Link } from '../interface';
 
 @Component({
   selector: 'app-links-display',

@@ -8,7 +8,7 @@ export interface Link {
 export interface Recipe {
     id: string;
     picture: string;
-    cooking: [];
+    steps: [];
     ingredients: [];
     extra: string;
     long: string;

@@ -1,4 +1,3 @@
-import { Cooking } from './../interface';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Recipe } from '../interface';
@@ -12,7 +11,9 @@ import { map } from 'rxjs/operators';
 export class RecipesService {
 
   recipesCollection: AngularFirestoreCollection<Recipe>;
+  selectedRecipe: AngularFirestoreCollection<Recipe>;
   recipes: Observable<Recipe[]>;
+  recipe: Observable<Recipe>;
   recipeDoc: AngularFirestoreDocument<Recipe>;
 
   constructor(public afs: AngularFirestore) {
@@ -24,28 +25,34 @@ export class RecipesService {
       map(actions => actions.map(a => {
         const data = a.payload.doc.data();
         data.id = a.payload.doc.id;
-        console.log ('BUILD - Recipes', data);
+        console.log('BUILD - Recipes', data);
         return { ...data };
       }))
     );
     return this.recipes;
   }
 
-  addRecipe(recipe: any, cooking: any, ingredients: any) {
-    const mergedObj = {...recipe, ...cooking, ...ingredients};
+  getRecipe(azon: string) {
+    console.log('Ez az id ment át:', azon);
+    this.recipeDoc = this.afs.doc(`recipes/${azon}`);
+    return this.recipeDoc.valueChanges();
+  }
+
+  addRecipe(recipe: any, cooking: any) {
+    const mergedObj = { ...recipe, ...cooking };
     this.recipesCollection.add(mergedObj);
-    console.log ('ADD - Recipes', mergedObj);
+    console.log('ADD - Recipes', mergedObj);
   }
 
   deleteRecipe(recipeid: any) {
     this.recipeDoc = this.afs.doc(`recipes/${recipeid}`);
     this.recipeDoc.delete();
-    console.log ('DELETE - Recipes', recipeid);
+    console.log('DELETE - Recipes', recipeid);
   }
 
   updateRecipe(recipeid: any, recipe: Recipe) {
     this.recipeDoc = this.afs.doc(`recipes/${recipeid}`);
     this.recipeDoc.update(recipe);
-    console.log ('UPDATE - Recipes');
+    console.log('UPDATE - Recipes');
   }
 }

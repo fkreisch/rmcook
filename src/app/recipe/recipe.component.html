@@ -1,0 +1,58 @@
+<div>
+    Showing product details for product: {{ sub }}
+</div>
+<div class="container">
+    <img src="{{ recipe.picture }}" class="img-fluid recipe-container">
+    <br>
+    <form [formGroup]="recipeForm">
+        <div class="form-group">
+            <label for="name">Recipe Name</label>
+            <input formControlName="name" [(ngModel)]="recipe.name" type="text" class="input-form-wbg" id="name">
+        </div>
+        <div class="form-group">
+            <label for="short">Short Details</label>
+            <textarea rows="3" formControlName="short" [(ngModel)]="recipe.short" type="text" class="input-form-wbg" id="short"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="long">Long Details</label>
+            <textarea rows="4" formControlName="long" [(ngModel)]="recipe.long" type="text" class="input-form-wbg" id="long"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="picture">Picture URL</label>
+            <input formControlName="picture" [(ngModel)]="recipe.picture" type="text" class="input-form-wbg" id="picture">
+        </div>
+        <div class="form-group">
+            <label for="extra">Notes</label>
+            <textarea rows="3" formControlName="extra" [(ngModel)]="recipe.extra" type="text" class="input-form-wbg" id="extra"></textarea>
+        </div>
+        <label>Steps</label>
+        <div class="form-group" *ngFor="let step of recipe.steps; let i=index" [formGroupName]="i">
+            <label for="picture"></label>
+            <input formControlName="stepsi" [(ngModel)]="step.stepContent" type="text" class="input-form-wbg" id="picture">
+        </div>
+
+        <form [formGroup]="cookingForm">
+
+            <div formArrayName="steps">
+
+                <div *ngFor="let step of stepForm.controls; let i=index" [formGroupName]="i">
+
+                    <input formControlName="stepContent">
+
+                    <button (click)="deleteStep(i)">Delete</button>
+
+                </div>
+            </div>
+
+            <button (click)="addStep()">Add step</button>
+
+        </form>
+
+
+        <button (click)="makeUpdate($event, id)" type="button" class="btn btn-primary commit">Modify</button>
+        <button (click)="makePost()" type="button" class="btn btn-primary commit">Add As New</button>
+        <button (click)="makeDelete($event, id)" type="button" class="btn btn-danger commit float-right">Delete</button>
+    </form>
+
+
+</div>

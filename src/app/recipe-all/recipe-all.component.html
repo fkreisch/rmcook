@@ -4,66 +4,11 @@
         <div class="row">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 recipe-b" *ngFor="let recipe of recipes">
                 <div class="recipe-container">
-                    <img src="{{ recipe.picture }}" class="pic img-responsive">
-                    <div class="name-container" (click)="openModal(recipeedit)">
+                    <img src="{{ recipe.picture }}" class="pic img-responsive" [routerLink]="['/recipe', recipe.id]">
+                    <div class="name-container">
                         <div class="name" id="{{ recipe.id }}">
                             {{ recipe.name }}
                         </div>
-
-                        <ng-template #recipeedit>
-                            <div class="modal-header">
-                                <h4 class="modal-title pull-left"> {{ recipe.name }} </h4>
-                                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            </div>
-                            <div class="modal-body">
-                                <br>
-                                <img src="{{ recipe.picture }}" class="img-fluid recipe-container">
-                                <br>
-                                <form [formGroup]="recipeForm">
-                                    <div class="form-group">
-                                        <label for="name">Recipe Name</label>
-                                        <input formControlName="name" [(ngModel)]="recipe.name" type="text" class="input-form-wbg" id="name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="short">Short Details</label>
-                                        <textarea rows="3" formControlName="short" [(ngModel)]="recipe.short" type="text" class="input-form-wbg" id="short"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="long">Long Details</label>
-                                        <textarea rows="4" formControlName="long" [(ngModel)]="recipe.long" type="text" class="input-form-wbg" id="long"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="picture">Picture URL</label>
-                                        <input formControlName="picture" [(ngModel)]="recipe.picture" type="text" class="input-form-wbg" id="picture">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="extra">Comments</label>
-                                        <textarea rows="3" formControlName="extra" [(ngModel)]="recipe.extra" type="text" class="input-form-wbg" id="extra"></textarea>
-                                    </div>
-
-                                    <form [formGroup]="cookingForm">
-                                        <div class="form-group">
-                                            <label for="cooking">Cooking</label>
-                                            <input formControlName="cooking" [(ngModel)]="recipe.cooking" type="text" class="input-form-wbg" id="cooking">
-                                        </div>
-                                    </form>
-
-                                    <form [formGroup]="ingredientsForm">
-                                        <div class="form-group">
-                                            <label for="ingredients">Ingredients</label>
-                                            <input formControlName="ingredients" [(ngModel)]="recipe.ingredients" type="text" class="input-form-wbg" id="ingredients">
-                                        </div>
-                                    </form>
-
-                                    <button (click)="makeUpdate($event, recipe.id)" type="button" class="btn btn-primary commit">Modify</button>
-                                    <button (click)="makePost()" type="button" class="btn btn-primary commit">Add As New</button>
-                                    <button (click)="makeDelete($event, recipe.id)" type="button" class="btn btn-danger commit float-right">Delete</button>
-                                </form>
-                            </div>
-                        </ng-template>
-
                     </div>
                 </div>
             </div>

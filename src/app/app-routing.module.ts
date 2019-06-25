@@ -6,6 +6,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { AskComponent } from './ask/ask.component';
 import { HomeComponent } from './home/home.component';
 import { LinksDisplayComponent } from './links-display/links-display.component';
+import { RecipeComponent } from './recipe/recipe.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,7 +31,12 @@ const routes: Routes = [
   {
     path: 'ask',
     component: AskComponent
-  }
+  },
+  {
+    path: 'recipe/:id',
+    component: RecipeComponent
+  },
+
 
 ];
 

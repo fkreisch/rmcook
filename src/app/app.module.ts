@@ -11,7 +11,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -34,6 +34,7 @@ import { RecipesService } from './services/recipes.service';
 // OTHER
 
 import { environment } from '../environments/environment';
+import { RecipeComponent } from './recipe/recipe.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { environment } from '../environments/environment';
     LinksDisplayComponent,
     HomeComponent,
     HeaderComponent,
+    RecipeComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +62,7 @@ import { environment } from '../environments/environment';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
+    FormsModule,
     ReactiveFormsModule,
   ],
   providers: [
